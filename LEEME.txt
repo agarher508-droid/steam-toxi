@@ -1,0 +1,24 @@
+TOXIRIA STEAM LAB — Google Apps Script
+
+CONTENIDO
+- Code.gs: inicialización de hojas, registro de uso de kits y creación de Situaciones de Aprendizaje en Google Docs.
+- Index.html: web con pestañas Proyecto y cronograma, Uso de kits, Situaciones de aprendizaje y Registros.
+
+INSTALACIÓN
+1. Entra en https://script.google.com y crea un proyecto nuevo.
+2. Pega Code.gs en el archivo principal.
+3. Crea un archivo HTML llamado exactamente Index y pega Index.html.
+4. Guarda el proyecto.
+5. Selecciona la función setup y pulsa Ejecutar. Autoriza los permisos de Drive, Docs y Sheets.
+6. Abre Ver > Registro de ejecución y copia las URL del registro y la carpeta.
+7. Ve a Implementar > Nueva implementación > Aplicación web.
+8. Ejecutar como: Yo. Acceso: Solo yo para la primera prueba.
+9. Implementa y abre la URL /exec.
+
+IMPORTANTE
+- La primera ejecución de setup crea la carpeta y el Google Sheets.
+- No vuelvas a ejecutar setup para un entorno nuevo si ya hay datos; el script reutiliza los IDs guardados en las propiedades del proyecto.
+- El acceso “Solo yo” es el más seguro para probar. Si se comparte con el claustro, revisa el acceso y los permisos del centro.
+- El registro de kits es un registro de uso; no bloquea automáticamente una reserva simultánea del mismo material.
+- Los criterios curriculares se introducen manualmente; deben contrastarse con la normativa vigente y la programación del curso.
+- Esta aplicación es un punto de partida funcional. Antes de utilizarla con datos personales del alumnado, no incluyas información sensible y revisa las normas de protección de datos del centro.

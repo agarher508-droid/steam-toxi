@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    :root{--navy:#173b57;--teal:#167d83;--bg:#f3f6f8;--ink:#203040;--muted:#607080;--line:#dce4e9;--white:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    header{background:linear-gradient(120deg,#173b57,#167d83);color:white;padding:24px 28px}
+    header h1{margin:0;font-size:25px;letter-spacing:.3px}
+    header p{margin:8px 0 0;opacity:.9}
+    .wrap{max-width:1200px;margin:auto;padding:20px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tab{border:1px solid var(--line);background:white;color:var(--navy);padding:12px 16px;border-radius:9px;cursor:pointer;font-weight:700}
+    .tab.active{background:var(--navy);color:white;border-color:var(--navy)}
+    .panel{display:none}.panel.active{display:block}
+    .card{background:white;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
+    h2{margin-top:0;color:var(--navy)} h3{color:var(--teal)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .field label{display:block;font-weight:700;font-size:13px;margin:12px 0 6px}
+    input,select,textarea{width:100%;padding:11px;border:1px solid #cbd6de;border-radius:8px;background:white;font:inherit}
+    textarea{min-height:76px;resize:vertical}
+    button.primary{background:var(--teal);color:white;border:0;border-radius:8px;padding:12px 16px;font-weight:700;cursor:pointer;margin-top:16px}
+    button:disabled{opacity:.55;cursor:wait}
+    .muted{color:var(--muted);font-size:13px}
+    .hero{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .stat{padding:16px;background:#eef6f6;border-radius:10px}
+    .stat strong{display:block;font-size:24px;color:var(--teal);margin-bottom:5px}
+    .timeline{border-left:3px solid var(--teal);padding-left:18px;margin-left:6px}
+    .month{margin:0 0 18px;position:relative}
+    .month:before{content:"";position:absolute;left:-26px;top:4px;width:12px;height:12px;background:var(--teal);border-radius:50%}
+    .table-wrap{overflow:auto}
+    table{border-collapse:collapse;width:100%;font-size:13px}
+    th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px;vertical-align:top}
+    th{background:#f0f5f7;color:var(--navy)}
+    a{color:#126e91}
+    .notice{padding:12px;border-radius:8px;background:#eef6f6;margin-top:14px;overflow-wrap:anywhere}
+    .hidden{display:none}
+    @media(max-width:720px){.grid,.hero{grid-template-columns:1fr}.wrap{padding:12px}header{padding:20px}.tab{flex:1}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>TOXIRIA STEAM LAB</h1>
+  <p>Plan STEAM 4.0 · CEIP Toxiria · Curso 2026-2027</p>
+</header>
+<div class="wrap">
+  <nav class="tabs">
+    <button class="tab active" data-tab="proyecto">Proyecto y cronograma</button>
+    <button class="tab" data-tab="kits">Uso de kits</button>
+    <button class="tab" data-tab="sda">Situaciones de aprendizaje</button>
+    <button class="tab" data-tab="registro">Registros</button>
+  </nav>
+
+  <section id="proyecto" class="panel active">
+    <div class="card">
+      <h2>Proyecto de centro</h2>
+      <p><strong>TOXIRIA STEAM LAB: investigar, crear y programar para mejorar nuestro colegio.</strong></p>
+      <p>Proyecto interdisciplinar para desarrollar el pensamiento computacional, la investigación científica, la ingeniería, la creatividad y la competencia digital desde Educación Infantil hasta 6.º de Primaria.</p>
+      <div class="hero">
+        <div class="stat"><strong>5</strong>ámbitos STEAM</div>
+        <div class="stat"><strong>9</strong>meses de actuación</div>
+        <div class="stat"><strong>3</strong>aplicaciones conectadas</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Cronograma de actuaciones</h2>
+      <div class="timeline">
+        <div class="month"><h3>Octubre · Organización</h3><p>Actualizar el proyecto, revisar inventario, organizar reservas y diseñar actividades iniciales.</p></div>
+        <div class="month"><h3>Noviembre · Robótica</h3><p>Explorar Gator-Bot, MatataStudio, micro:bit y Maqueen; diseñar retos de programación.</p></div>
+        <div class="month"><h3>Diciembre · Electrónica y creatividad</h3><p>Makey Makey, circuitos de papel, plotter y pirámides holográficas.</p></div>
+        <div class="month"><h3>Enero · Ciencia y matemáticas</h3><p>Experimentos, sensores, variables, mediciones y registro de resultados.</p></div>
+        <div class="month"><h3>Febrero · Ingeniería</h3><p>Construcción de estructuras, prototipos y circuitos de movilidad segura.</p></div>
+        <div class="month"><h3>Marzo · Sostenibilidad</h3><p>Smart Garden, agricultura inteligente, humedad y ahorro de agua.</p></div>
+        <div class="month"><h3>Abril · Diseño 3D</h3><p>Diseñar, imprimir y evaluar prototipos con supervisión docente.</p></div>
+        <div class="month"><h3>Mayo · Creación y divulgación</h3><p>Videojuegos, proyectos finales, vídeos y preparación de la Feria STEAM.</p></div>
+        <div class="month"><h3>Junio · Feria y evaluación</h3><p>Exposición, valoración de resultados, memoria final y propuestas de mejora.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kits" class="panel">
+    <div class="card">
+      <h2>Registro del uso de kits y recursos</h2>
+      <p class="muted">Registra cada préstamo o sesión. Comprueba disponibilidad y devuelve el material según la organización interna del centro.</p>
+      <form id="kitForm">
+        <div class="grid">
+          <div class="field"><label>Fecha de uso *</label><input name="fecha" type="date" required></div>
+          <div class="field"><label>Curso o grupo *</label><select name="curso" required><option value="">Seleccionar</option><option>Infantil</option><option>1.º Primaria</option><option>2.º Primaria</option><option>3.º Primaria</option><option>4.º Primaria</option><option>5.º Primaria</option><option>6.º Primaria</option><option>Uso común / formación docente</option></select></div>
+          <div class="field"><label>Docente responsable *</label><input name="docente" required></div>
+          <div class="field"><label>Kit o recurso *</label><select name="kit" id="kitSelect" required></select></div>
+          <div class="field"><label>Cantidad *</label><input name="cantidad" type="number" min="1" value="1" required></div>
+          <div class="field"><label>Estado del material</label><select name="estado"><option>Correcto</option><option>Incidencia</option><option>Pendiente de revisar</option></select></div>
+          <div class="field"><label>Hora de inicio</label><input name="inicio" type="time"></div>
+          <div class="field"><label>Hora de fin</label><input name="fin" type="time"></div>
+        </div>
+        <div class="field"><label>Actividad o propósito</label><textarea name="actividad" placeholder="Reto o situación de aprendizaje"></textarea></div>
+        <div class="field"><label>Observaciones / incidencias</label><textarea name="observaciones"></textarea></div>
+        <button class="primary" type="submit">Registrar uso del kit</button>
+      </form>
+      <div id="kitMsg" class="notice hidden"></div>
+    </div>
+  </section>
+
+  <section id="sda" class="panel">
+    <div class="card">
+      <h2>Registro de Situaciones de Aprendizaje</h2>
+      <p class="muted">Al enviar el formulario se crea un Google Docs en la carpeta STEAM y se registra en la hoja de cálculo.</p>
+      <form id="sdaForm">
+        <div class="grid">
+          <div class="field"><label>Título *</label><input name="titulo" required placeholder="Ej. Smart Garden"></div>
+          <div class="field"><label>Curso *</label><select name="curso" required><option value="">Seleccionar</option><option>Infantil</option><option>1.º Primaria</option><option>2.º Primaria</option><option>3.º Primaria</option><option>4.º Primaria</option><option>5.º Primaria</option><option>6.º Primaria</option></select></div>
+          <div class="field"><label>Ciclo</label><select name="ciclo"><option>Infantil</option><option>Primer ciclo</option><option>Segundo ciclo</option><option>Tercer ciclo</option></select></div>
+          <div class="field"><label>Trimestre</label><select name="trimestre"><option>Primer trimestre</option><option>Segundo trimestre</option><option>Tercer trimestre</option></select></div>
+          <div class="field"><label>Responsable *</label><input name="responsable" required></div>
+          <div class="field"><label>Modelo STEAM</label><select name="modelo"><option>Robótica y pensamiento computacional</option><option>Programación y electrónica</option><option>Ciencia y sostenibilidad</option><option>Ingeniería e impresión 3D</option><option>Hologramas y comunicación digital</option><option>Proyecto interdisciplinar</option></select></div>
+        </div>
+        <div class="field"><label>Reto o problema</label><textarea name="reto"></textarea></div>
+        <div class="field"><label>Pregunta guía</label><textarea name="pregunta"></textarea></div>
+        <div class="field"><label>Producto final</label><textarea name="producto"></textarea></div>
+        <div class="field"><label>Objetivos de aprendizaje</label><textarea name="objetivos"></textarea></div>
+        <div class="field"><label>Competencias específicas</label><textarea name="competencias"></textarea></div>
+        <div class="field"><label>Criterios de evaluación oficiales</label><textarea name="criterios" placeholder="Introducir los criterios correspondientes al curso y área"></textarea></div>
+        <div class="field"><label>Saberes básicos</label><textarea name="saberes"></textarea></div>
+        <div class="field"><label>Actividades y sesiones</label><textarea name="actividades" placeholder="Secuencia semanal o por sesiones"></textarea></div>
+        <div class="field"><label>Recursos STEAM</label><textarea name="recursos" placeholder="Selecciona o escribe los kits utilizados"></textarea></div>
+        <div class="field"><label>Metodología y agrupamientos</label><textarea name="metodologia"></textarea></div>
+        <div class="field"><label>Atención a la diversidad</label><textarea name="inclusion"></textarea></div>
+        <div class="field"><label>Instrumentos de evaluación</label><textarea name="evaluacion"></textarea></div>
+        <div class="field"><label>Indicadores de logro</label><textarea name="indicadores"></textarea></div>
+        <div class="field"><label>Evidencias de aprendizaje</label><textarea name="evidencias"></textarea></div>
+        <button class="primary" type="submit">Crear Google Docs y registrar</button>
+      </form>
+      <div id="sdaMsg" class="notice hidden"></div>
+    </div>
+  </section>
+
+  <section id="registro" class="panel">
+    <div class="card">
+      <h2>Últimos registros</h2>
+      <p class="muted">Se muestran los últimos registros almacenados. La hoja de cálculo conserva el registro completo.</p>
+      <button class="primary" id="refresh">Actualizar registros</button>
+      <h3>Uso de kits</h3><div id="kitTable" class="table-wrap"></div>
+      <h3>Situaciones de aprendizaje</h3><div id="sdaTable" class="table-wrap"></div>
+      <div id="sheetLink" class="notice"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+let appData = null;
+document.querySelectorAll('.tab').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === btn.dataset.tab));
+  if (btn.dataset.tab === 'registro') cargarDatos();
+}));
+
+function formObject(form) {
+  return Object.fromEntries(new FormData(form).entries());
+}
+function showMessage(id, message, url) {
+  const box = document.getElementById(id);
+  box.classList.remove('hidden');
+  box.replaceChildren();
+  const p = document.createElement('p');
+  p.textContent = message;
+  box.appendChild(p);
+  if (url) {
+    const a = document.createElement('a');
+    a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Abrir documento o registro';
+    box.appendChild(a);
+  }
+}
+function submitForm(formId, fn, msgId, successText) {
+  const form = document.getElementById(formId);
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    const data = formObject(form);
+    google.script.run
+      .withSuccessHandler(res => {
+        showMessage(msgId, successText + (res.id || res.code ? ' Código: ' + (res.id || res.code) : ''), res.url || res.spreadsheetUrl);
+        form.reset();
+        btn.disabled = false;
+        cargarDatos();
+      })
+      .withFailureHandler(err => {
+        showMessage(msgId, 'No se ha podido completar: ' + err.message);
+        btn.disabled = false;
+      })[fn](data);
+  });
+}
+submitForm('kitForm', 'registrarUsoKit', 'kitMsg', 'Uso registrado correctamente.');
+submitForm('sdaForm', 'crearSDA', 'sdaMsg', 'Situación creada y registrada.');
+
+function cargarDatos() {
+  google.script.run.withSuccessHandler(data => {
+    appData = data;
+    const sel = document.getElementById('kitSelect');
+    const old = sel.value;
+    sel.replaceChildren(new Option('Seleccionar recurso', ''));
+    data.kits.forEach(k => sel.add(new Option(k, k)));
+    if (old) sel.value = old;
+    renderTable('kitTable', data.kitRows, ['ID','Fecha uso','Curso/grupo','Docente','Recurso o kit','Cantidad','Actividad/propósito','Estado del material']);
+    renderTable('sdaTable', data.sdaRows, ['Código','Fecha creación','Título','Curso','Trimestre','Responsable','Modelo STEAM','Estado','URL Google Docs']);
+    document.getElementById('sheetLink').replaceChildren();
+    const a = document.createElement('a');
+    a.href = data.spreadsheetUrl; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Abrir hoja de cálculo completa';
+    document.getElementById('sheetLink').appendChild(a);
+  }).withFailureHandler(err => {
+    document.getElementById('sheetLink').textContent = 'Error al cargar: ' + err.message;
+  }).getInitialData();
+}
+function renderTable(id, rows, headers) {
+  const root = document.getElementById(id);
+  root.replaceChildren();
+  if (!rows || !rows.length) { root.textContent = 'Todavía no hay registros.'; return; }
+  const table = document.createElement('table');
+  const thead = document.createElement('thead'), tr = document.createElement('tr');
+  headers.forEach(h => { const th = document.createElement('th'); th.textContent = h; tr.appendChild(th); });
+  thead.appendChild(tr); table.appendChild(thead);
+  const tbody = document.createElement('tbody');
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    headers.forEach(h => {
+      const indexMap = {
+        'ID':0,'Fecha uso':2,'Curso/grupo':3,'Docente':4,'Recurso o kit':5,'Cantidad':6,
+        'Actividad/propósito':9,'Estado del material':10,
+        'Código':0,'Fecha creación':1,'Título':2,'Curso':3,'Trimestre':5,
+        'Responsable':6,'Modelo STEAM':7,'Estado':11,'URL Google Docs':12
+      };
+      const td = document.createElement('td');
+      const v = row[indexMap[h]] || '';
+      if (h === 'URL Google Docs' && v) {
+        const a = document.createElement('a'); a.href = v; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Abrir Docs'; td.appendChild(a);
+      } else td.textContent = v;
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody); root.appendChild(table);
+}
+document.getElementById('refresh').addEventListener('click', cargarDatos);
+cargarDatos();
+</script>
+</body>
+</html>
